@@ -12,8 +12,9 @@
       import { onboardingTooltip } from "./src/onboarding_tooltip.js";
       import { pricingBanner } from "./src/pricing_banner.js";
       import { rankResults } from "./src/search_ranking.js";
+      import { signupForm } from "./src/signup_form.js";
       document.getElementById("app").innerHTML =
-        onboardingTooltip() + pricingBanner() + rankResults(window.__RESULTS__ || []).join("") + checkoutButton() + exitPopup();
+        onboardingTooltip() + pricingBanner() + rankResults(window.__RESULTS__ || []).join("") + checkoutButton() + exitPopup() + signupForm();
     </script>
   </body>
 </html>

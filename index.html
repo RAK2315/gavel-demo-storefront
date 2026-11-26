@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo storefront</title>
+  </head>
+  <body>
+    <main id="app"></main>
+    <script type="module">
+      import { checkoutButton } from "./src/checkout_cta.js";
+      import { exitPopup } from "./src/exit_popup.js";
+      import { onboardingTooltip } from "./src/onboarding_tooltip.js";
+      import { pricingBanner } from "./src/pricing_banner.js";
+      import { rankResults } from "./src/search_ranking.js";
+      document.getElementById("app").innerHTML =
+        onboardingTooltip() + pricingBanner() + rankResults(window.__RESULTS__ || []).join("") + checkoutButton() + exitPopup();
+    </script>
+  </body>
+</html>
